@@ -59,56 +59,54 @@ The organized project structure is as follows:
 
 ```text
 SHT-GNN/
-├── README.md                     # 项目说明文档
-├── main.py                       # 主入口脚本（训练与评估）
+├── README.md                     
+├── main.py                       
 │
-├── scripts/                      # 独立运行脚本
-│   ├── preprocess/               # 数据预处理脚本
-│   │   ├── Data_preprocessing.py     # 原始数据清洗与预处理
-│   │   ├── Response_gerenate_16.py   # 生成响应变量（模拟）
-│   │   ├── Edge_index_generate.py    # 生成纵向边索引
-│   │   ├── IndiceGenerate.py         # 生成训练/验证/测试索引
-│   │   ├── TimeConvert.py            # 时间格式转换
-│   │   ├── Time_Decay_weight.py      # 计算时间衰减权重
-│   │   ├── Normalize_Matrix.py       # 矩阵归一化
-│   │   └── JaccardDistance.py        # 计算 Jaccard 距离
-│   └── baselines/                # 基线模型脚本
-│       └── linear_regression_y_baseline.py  # 线性回归基线
+├── scripts/                      
+│   ├── preprocess/              
+│   │   ├── Data_preprocessing.py     
+│   │   ├── Response_gerenate_16.py   
+│   │   ├── Edge_index_generate.py    
+│   │   ├── IndiceGenerate.py         
+│   │   ├── TimeConvert.py            
+│   │   ├── Time_Decay_weight.py      
+│   │   ├── Normalize_Matrix.py       
+│   │   └── JaccardDistance.py        
+│   └── baselines/                
+│       └── linear_regression_y_baseline.py  
 │
-├── data_process/                 # 数据处理模块
+├── data_process/                 
 │   ├── __init__.py
-│   ├── data_load.py              # 数据加载与划分
-│   └── data_subparser.py         # 数据相关参数解析
+│   ├── data_load.py              
+│   └── data_subparser.py         
 │
-├── models/                       # 模型定义模块
+├── models/                      
 │   ├── __init__.py
-│   ├── gnn_model.py              # 通用 GNN 模型封装
-│   ├── egcn.py                   # Edge-based GCN 实现
-│   ├── egsage.py                 # Edge-based GraphSAGE 实现
-│   ├── longitudinal_network.py   # 纵向网络结构
-│   └── prediction_model.py       # 预测头/输出层
+│   ├── gnn_model.py              
+│   ├── egcn.py                   
+│   ├── egsage.py                 
+│   ├── longitudinal_network.py   
+│   └── prediction_model.py       
 │
-├── training/                     # 训练流程模块
+├── training/                     
 │   ├── __init__.py
-│   ├── gnn_y.py                  # GNN 训练主流程
-│   ├── baseline.py               # 基线方法训练
-│   ├── linear_regression.py      # 线性回归训练
-│   ├── subject_mapping.py        # 个体 ID 映射
-│   └── WeightGraph.py            # 带权图构建
+│   ├── gnn_y.py                  
+│   ├── baseline.py               
+│   ├── linear_regression.py      
+│   ├── subject_mapping.py        
+│   └── WeightGraph.py            
 │
-└── utils/                        # 工具函数模块
+└── utils/                        
     ├── __init__.py
-    ├── utils.py                  # 通用工具函数
-    └── plot_utils.py             # 可视化工具
+    ├── utils.py                  
+    └── plot_utils.py             
 ```
 
-> **注意**: 如果你还没有整理文件结构，请参考文末的[文件整理脚本](#文件整理)。
+
 
 ---
 
-## 🔄 数据预处理
-
-数据预处理包含以下步骤（按顺序执行）：
+## 🔄 Data Preprocessing
 
 ### Step 1: Generate Response Variables (Simulation Experiments)
 
@@ -436,4 +434,5 @@ For questions or suggestions, please contact:
 ## 📄 License
 
 MIT License
+
 
